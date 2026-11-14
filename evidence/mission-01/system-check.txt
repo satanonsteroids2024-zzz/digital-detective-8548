@@ -1,0 +1,15 @@
+$ system_profiler SPHardwareDataType   (model, chip and memory lines only)
+Model Name: MacBook Pro
+Chip: Apple M5
+Memory: 16 GB
+
+$ df -h /
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1   926Gi    13Gi   456Gi     3%    487k  4.3G    0%   /
+
+$ ls /Applications   (the apps used in the tables)
+Google Chrome.app
+Visual Studio Code.app
+Activity Monitor.app
+Disk Utility.app
+Terminal.app
