@@ -10,6 +10,12 @@ My Diwali independent learning assignment. The idea is to investigate how my own
 
 Every mission has its own folder with its own README. I finish a mission, write it up, check the files for anything private, then commit and push it before I start the next one. So each mission has its own commit in the history, and the commits are in mission order.
 
+## My Learning
+
+- A commit is a saved snapshot, and each mission gets its own, so the history shows my work in order. Staging first (`git add`) lets me choose exactly what goes into a commit.
+- Paths and redirects matter more than I expected. An absolute path works from anywhere while a relative one depends on where I am, and `>` replaces a file while `>>` adds to the end of it.
+- Numbers on a computer are just bits. I converted 13 to binary by dividing by 2 and checked it with Python, and I saw that text also has to be turned into numbers (A is 65) before it can be stored.
+
 ## Mission index
 
 | # | Mission | Folder |
