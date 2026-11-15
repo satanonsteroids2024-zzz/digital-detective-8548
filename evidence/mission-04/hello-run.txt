@@ -1,0 +1,8 @@
+$ cat hello.py
+print("Hello from Python")
+
+$ python3 hello.py
+Hello from Python
+
+$ python3 --version
+Python 3.14.7
