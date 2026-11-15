@@ -64,7 +64,7 @@ The folders are split by mission because each mission is about a different topic
 
 ## 6. How I resolved them
 - I created the repository by naming the account explicitly instead of relying on whichever account was active, then checked the URL after.
-- I added an empty `.gitkeep` file inside `evidence/` so Git would track the folder. I will delete it once there is a real screenshot in there.
+- I added an empty `.gitkeep` file inside `evidence/` so Git would track the folder. I deleted it at the end (Mission 8) once the folder had real evidence files in it.
 
 ## 7. Evidence / files
 - [Root README](../README.md)

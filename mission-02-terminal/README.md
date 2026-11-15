@@ -70,10 +70,10 @@ I did not install or uninstall anything.
 **Package managers.** A package manager installs, updates and removes software from the command line, and it also works out which other packages a program needs and installs those too. That saves me from downloading installers by hand, makes it easy to update everything with one command, and means a tool can be removed cleanly. Homebrew is the one used on macOS, and it was already installed here.
 
 ## 5. Difficulties faced
-`cat original.txt` printed nothing, which looked like the command had failed.
+`cat original.txt` printed nothing, so I wanted to be sure it had worked.
 
 ## 6. How I resolved them
-I realised the file was empty because I had only created it with `touch`. I ran `wc -c original.txt`, which showed 0 bytes, so the blank output was correct.
+The file was empty because I had only created it with `touch`. I ran `wc -c original.txt`, which showed 0 bytes, so the blank output was correct.
 
 ## 7. Evidence / files
 - [evidence/mission-02/terminal-session.txt](../evidence/mission-02/terminal-session.txt): commands and outputs from the whole session (username redacted)
