@@ -36,4 +36,5 @@ Screenshots and selected outputs go in [evidence](evidence/). I redact anything 
 | 3 | Done |
 | 4 | Done |
 | 5 | Done |
-| 6 to 8 | Not started |
+| 6 | Done (Pull Request open, not merged) |
+| 7 to 8 | Not started |

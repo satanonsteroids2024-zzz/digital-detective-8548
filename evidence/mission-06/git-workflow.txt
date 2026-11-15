@@ -1,0 +1,72 @@
+##### Task 6.1 on main
+$ git branch --show-current
+main
+
+$ git status --short
+ M mission-06-git-github/README.md
+
+$ git add mission-06-git-github/README.md
+
+$ git status --short
+M  mission-06-git-github/README.md
+
+$ git commit -m "Start Mission 6 notes on the Git workflow"
+[main a09421c] Start Mission 6 notes on the Git workflow
+ 1 file changed, 6 insertions(+)
+
+$ git log --oneline -n 5
+a09421c Start Mission 6 notes on the Git workflow
+c8be28c Remove a difficulty that did not happen from the Mission 5 README
+dc8984a Build number converter and practise data representation
+118b88d Compare compilers and interpreters
+2211378 Document operating system and file management
+
+##### Task 6.2 branch and README change
+$ git switch -c update-about
+Switched to a new branch 'update-about'
+
+$ git branch
+  main
+* update-about
+
+$ git status --short
+ M README.md
+
+$ git diff --stat
+ README.md | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+$ git add README.md
+
+$ git commit -m "Add My Learning section to the root README"
+[update-about 09d568f] Add My Learning section to the root README
+ 1 file changed, 6 insertions(+)
+
+$ git push -u origin update-about
+remote: 
+remote: Create a pull request for 'update-about' on GitHub by visiting:        
+remote:      https://github.com/satanonsteroids2024-zzz/digital-detective-8548/pull/new/update-about        
+remote: 
+To https://github.com/satanonsteroids2024-zzz/digital-detective-8548.git
+ * [new branch]      update-about -> update-about
+branch 'update-about' set up to track 'origin/update-about'.
+
+$ git log --oneline -n 3
+09d568f Add My Learning section to the root README
+a09421c Start Mission 6 notes on the Git workflow
+c8be28c Remove a difficulty that did not happen from the Mission 5 README
+
+
+##### Task 6.3 Pull Request
+$ gh pr create --base main --head update-about --title "Add My Learning section to the root README" ...
+https://github.com/satanonsteroids2024-zzz/digital-detective-8548/pull/1
+
+$ gh api repos/<me>/digital-detective-8548/compare/main...update-about   (what the PR changes)
+commits ahead of main: 1, files changed: README.md
+
+$ gh pr view 1 --json state,mergeable
+state=OPEN mergeable=MERGEABLE
+
+$ git switch main && git pull   (PR is not merged, so there was nothing new to bring down)
+Your branch is up to date with 'origin/main'.
+Already up to date.
