@@ -1,0 +1,66 @@
+$ sw_vers
+ProductName:		macOS
+ProductVersion:		27.2
+BuildVersion:		26B123
+
+$ uname -srm
+Darwin 27.2.0 arm64
+
+$ whoami
+[redacted]
+
+$ df -h /
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1   926Gi    13Gi   456Gi     3%    487k  4.3G    0%   /
+
+$ top -l 1 -n 0 | head -n 12
+Processes: 831 total, 3 running, 828 sleeping, 4182 threads 
+2026/11/15 05:30:46
+Load Avg: 2.17, 2.50, 2.71 
+CPU usage: 10.92% user, 15.23% sys, 73.84% idle 
+SharedLibs: 866M resident, 159M data, 130M linkedit.
+MemRegions: 434104 total, 4620M resident, 345M private, 2143M shared.
+PhysMem: 14G used (2580M wired, 2117M compressor), 794M unused.
+VM: 410T vsize, 57G framework vsize, 17866(0) swapins, 39984(0) swapouts.
+Networks: packets: 5744609/6977M in, 1114130/644M out.
+Disks: 3725791/163G read, 1754046/33G written.
+
+
+
+$ ps -axo pid,comm | awk 'NR==1{print; next} {n=split($2,a,"/"); print $1, a[n]}' | head -n 12
+  PID COMM
+1 launchd
+344 logd
+346 smd
+347 UserEventAgent
+349 fseventsd
+350 mediaremoted
+354 systemstats
+356 accessoryupdaterd
+357 uarpassetmanagerd
+358 configd
+359 endpointsecurityd
+
+$ ps -axo pid,comm | awk '{n=split($2,a,"/"); print $1, a[n]}' | grep -E ' (launchd|Finder|Terminal|Google Chrome|Code Helper|Visual Studio Code)$' | sort -u -k2,2 | head
+680 Finder
+1 launchd
+
+$ pwd
+/Users/[redacted]/Desktop/digital-detective-8548
+
+$ cd mission-03-operating-system && pwd
+/Users/[redacted]/Desktop/digital-detective-8548/mission-03-operating-system
+
+$ cd .. && pwd
+/Users/[redacted]/Desktop/digital-detective-8548
+
+$ ls -l mission-02-terminal/terminal-practice/notes.txt
+-rw-r--r--@ 1 [redacted]  staff  76 Nov 15 05:30 mission-02-terminal/terminal-practice/notes.txt
+
+$ ls -ld mission-02-terminal/terminal-practice
+drwxr-xr-x@ 6 [redacted]  staff  192 Nov 15 05:30 mission-02-terminal/terminal-practice
+
+$ df -h /System/Volumes/Data
+Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s5   926Gi   432Gi   456Gi    49%    1.7M  4.8G    0%   /System/Volumes/Data
+
