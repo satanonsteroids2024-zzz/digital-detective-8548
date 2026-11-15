@@ -56,7 +56,7 @@ Staging (`git add`) and committing (`git commit`) are two steps. Staging chooses
 
 ## 6. How I resolved them
 - I worked out that I had created `update-about` from a local `main` that was one commit ahead of GitHub's `main`, so that commit was being counted as part of the PR. I pushed `main` to GitHub first. After that, the compare view showed only `README.md` as changed.
-- I checked the branch comparison through GitHub's compare view, which showed the right result (one commit ahead, one file changed), while the PR page was still refreshing.
+- I checked the branch comparison through GitHub's compare view, which showed the right result (one commit ahead, one file changed). The PR page only caught up after I closed and reopened the Pull Request, and it now shows one changed file.
 
 ## 7. Evidence / files
 - [evidence/mission-06/git-workflow.txt](../evidence/mission-06/git-workflow.txt): the Git commands and outputs from the workflow, the branch publish and the Pull Request check

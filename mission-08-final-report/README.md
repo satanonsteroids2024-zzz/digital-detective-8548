@@ -70,7 +70,7 @@ Each mission was one part of the same picture, from what a computer is made of, 
 - Writing about my own computer meant being careful each time not to paste anything that identifies me.
 
 ## 6. How I resolved them
-- I compared the branches with GitHub's compare view, which showed the correct result, and let the Pull Request page refresh on its own.
+- I compared the branches with GitHub's compare view, which showed the correct result. The Pull Request page only updated after I waited and then closed and reopened the Pull Request, and it now shows one changed file and says it can be merged.
 - I used commands that print only what I need (for example `dig ... +noall +answer`), replaced my account name with `[redacted]`, and ran searches over the files and history before every commit.
 
 ## 7. Evidence / files
