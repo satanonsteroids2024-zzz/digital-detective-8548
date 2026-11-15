@@ -35,4 +35,5 @@ Screenshots and selected outputs go in [evidence](evidence/). I redact anything 
 | 2 | Done |
 | 3 | Done |
 | 4 | Done |
-| 5 to 8 | Not started |
+| 5 | Done |
+| 6 to 8 | Not started |

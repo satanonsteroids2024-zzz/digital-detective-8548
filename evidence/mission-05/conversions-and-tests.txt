@@ -1,0 +1,64 @@
+### Task 5.2: Python as a calculator (checked in Python, expression -> result)
+>>> bin(13)
+'0b1101'
+>>> bin(25)
+'0b11001'
+>>> int("1010", 2)
+10
+>>> int("1101", 2)
+13
+>>> int("A", 16)
+10
+>>> int("1F", 16)
+31
+>>> hex(int("1111", 2))
+'0xf'
+>>> hex(10)
+'0xa'
+>>> hex(31)
+'0x1f'
+
+### Task 5.3: number_converter.py runs
+$ python3 number_converter.py   (typed: 13)
+Enter a decimal number: Decimal:     13
+Binary:      1101   (Python shows it as 0b1101)
+Hexadecimal: D   (Python shows it as 0xd)
+
+$ python3 number_converter.py   (typed: 25)
+Enter a decimal number: Decimal:     25
+Binary:      11001   (Python shows it as 0b11001)
+Hexadecimal: 19   (Python shows it as 0x19)
+
+$ python3 number_converter.py   (typed: 255)
+Enter a decimal number: Decimal:     255
+Binary:      11111111   (Python shows it as 0b11111111)
+Hexadecimal: FF   (Python shows it as 0xff)
+
+$ python3 number_converter.py   (typed: 1024)
+Enter a decimal number: Decimal:     1024
+Binary:      10000000000   (Python shows it as 0b10000000000)
+Hexadecimal: 400   (Python shows it as 0x400)
+
+$ python3 number_converter.py   (typed: 0)
+Enter a decimal number: Decimal:     0
+Binary:      0   (Python shows it as 0b0)
+Hexadecimal: 0   (Python shows it as 0x0)
+
+### Bad input checks
+$ python3 number_converter.py   (typed: abc)
+Enter a decimal number: That is not a whole number. Please type digits only, like 25.
+
+$ python3 number_converter.py   (typed: -5)
+Enter a decimal number: Please enter a positive number (or zero).
+
+$ python3 number_converter.py   (typed: 3.5)
+Enter a decimal number: That is not a whole number. Please type digits only, like 25.
+
+### Task 5.4: text encoding
+ord('A') = 65
+ord('a') = 97
+chr(65) = A
+'A'.encode('ascii') = b'A'
+ord('₹') = 8377 (Unicode code point U+20B9)
+'₹'.encode('utf-8') = b'\xe2\x82\xb9' -> 3 bytes
+'₹'.encode('ascii') fails: UnicodeEncodeError
