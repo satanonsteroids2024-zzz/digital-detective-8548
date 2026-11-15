@@ -88,11 +88,9 @@ Invalid input also worked as intended: `abc` and `3.5` printed "That is not a wh
 
 ## 5. Difficulties faced
 - When I first ran Python's interactive mode with the commands piped in, the expressions were not shown next to their results, so the output was hard to read.
-- My first thought for `1F` was to treat the F as 1 in the ones place instead of 15.
 
 ## 6. How I resolved them
 - I re-ran the checks so that each expression is printed with its result, and saved that in the evidence file.
-- I went back to the reminder that A to F stand for 10 to 15, and recalculated 1F as 1×16 + 15 = 31, which matched Python.
 
 ## 7. Evidence / files
 - [number_converter.py](number_converter.py): the converter
