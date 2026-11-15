@@ -1,0 +1,113 @@
+$ pwd
+/Users/[redacted]/Desktop/digital-detective-8548
+
+$ ls
+README.md
+evidence
+mission-00-setup
+mission-01-computer-basics
+mission-02-terminal
+mission-03-operating-system
+mission-04-programs
+mission-05-numbers-data
+mission-06-git-github
+mission-07-networking
+mission-08-final-report
+
+$ ls -l
+total 8
+-rw-r--r--@ 1 [redacted]  staff  1974 Nov 15 05:30 README.md
+drwxr-xr-x@ 5 [redacted]  staff   160 Nov 15 05:30 evidence
+drwxr-xr-x@ 3 [redacted]  staff    96 Nov 15 05:27 mission-00-setup
+drwxr-xr-x@ 3 [redacted]  staff    96 Nov 15 05:27 mission-01-computer-basics
+drwxr-xr-x@ 3 [redacted]  staff    96 Nov 15 05:27 mission-02-terminal
+drwxr-xr-x@ 3 [redacted]  staff    96 Nov 15 05:27 mission-03-operating-system
+drwxr-xr-x@ 3 [redacted]  staff    96 Nov 15 05:27 mission-04-programs
+drwxr-xr-x@ 4 [redacted]  staff   128 Nov 15 05:27 mission-05-numbers-data
+drwxr-xr-x@ 3 [redacted]  staff    96 Nov 15 05:27 mission-06-git-github
+drwxr-xr-x@ 3 [redacted]  staff    96 Nov 15 05:27 mission-07-networking
+drwxr-xr-x@ 3 [redacted]  staff    96 Nov 15 05:27 mission-08-final-report
+
+$ pwd
+/Users/[redacted]/Desktop/digital-detective-8548/mission-02-terminal
+
+$ echo "(after cd ..)"; pwd
+(after cd ..)
+/Users/[redacted]/Desktop/digital-detective-8548
+
+$ cd mission-02-terminal && pwd
+/Users/[redacted]/Desktop/digital-detective-8548/mission-02-terminal
+
+$ mkdir terminal-practice
+
+$ pwd
+/Users/[redacted]/Desktop/digital-detective-8548/mission-02-terminal/terminal-practice
+
+$ touch original.txt && ls
+original.txt
+
+$ cp original.txt copy.txt && ls
+copy.txt
+original.txt
+
+$ mv copy.txt renamed-copy.txt && ls
+original.txt
+renamed-copy.txt
+
+$ echo "Line one: this is my first line." > notes.txt
+
+$ cat notes.txt
+Line one: this is my first line.
+
+$ echo "Line two: added without removing line one." >> notes.txt
+
+$ cat notes.txt
+Line one: this is my first line.
+Line two: added without removing line one.
+
+$ cp notes.txt notes-backup.txt && mv notes-backup.txt notes.bak && ls
+notes.bak
+notes.txt
+original.txt
+renamed-copy.txt
+
+$ cat original.txt
+
+$ echo "(original.txt is empty, so cat prints nothing. wc -c says:)"; wc -c original.txt
+(original.txt is empty, so cat prints nothing. wc -c says:)
+       0 original.txt
+
+$ ls
+notes.bak
+notes.txt
+original.txt
+renamed-copy.txt
+
+$ ls -lah
+total 16
+drwxr-xr-x@ 6 [redacted]  staff   192B Nov 15 05:30 .
+drwxr-xr-x@ 4 [redacted]  staff   128B Nov 15 05:30 ..
+-rw-r--r--@ 1 [redacted]  staff    76B Nov 15 05:30 notes.bak
+-rw-r--r--@ 1 [redacted]  staff    76B Nov 15 05:30 notes.txt
+-rw-r--r--@ 1 [redacted]  staff     0B Nov 15 05:30 original.txt
+-rw-r--r--@ 1 [redacted]  staff     0B Nov 15 05:30 renamed-copy.txt
+
+$ ls -lah | head -n 4
+total 16
+drwxr-xr-x@ 6 [redacted]  staff   192B Nov 15 05:30 .
+drwxr-xr-x@ 4 [redacted]  staff   128B Nov 15 05:30 ..
+-rw-r--r--@ 1 [redacted]  staff    76B Nov 15 05:30 notes.bak
+
+$ brew --version
+Homebrew 7.0.13
+
+$ brew list --formula | wc -l
+      28
+
+$ brew list --formula | head -n 5
+abseil
+ada-url
+brotli
+c-ares
+ca-certificates
+
