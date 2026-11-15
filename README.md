@@ -31,4 +31,5 @@ Screenshots and selected outputs go in [evidence](evidence/). I redact anything 
 | Mission | Status |
 |---|---|
 | 0 | Done |
-| 1 to 8 | Not started |
+| 1 | Done |
+| 2 to 8 | Not started |
